@@ -48,7 +48,7 @@ export function ChatWindow() {
   };
 
   useEffect(() => {
-    scrollToBottom();
+    //scrollToBottom();
   }, [messages, isLoading]);
 
   useEffect(() => {
