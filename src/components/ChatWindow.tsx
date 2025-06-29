@@ -101,11 +101,8 @@ export function ChatWindow() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gray-950/50 rounded-lg backdrop-blur-sm border border-blue-900/50 shadow-xl relative">
-      <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-900/20 via-blue-800/20 to-blue-900/20 rounded-lg blur-sm -z-10"></div>
-      <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-800/10 via-blue-700/10 to-blue-800/10 rounded-lg blur-md -z-20"></div>
-
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+    <div className="h-full flex flex-col bg-white rounded-lg border border-gray-200 shadow-xl relative">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-white">
         {messages.map((message, index) => (
           <div
             key={index}
@@ -134,7 +131,7 @@ export function ChatWindow() {
 
       <form
         onSubmit={handleSubmit}
-        className="border-t border-blue-900/50 p-4 bg-gray-950/30"
+        className="border-t border-gray-200 p-4 bg-gray-50"
       >
         <div className="flex gap-4">
           <input
@@ -142,7 +139,7 @@ export function ChatWindow() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask Chrysalis AI about the Chrysalis Teachings..."
-            className="flex-1 bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-900"
+            className="flex-1 bg-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 text-black"
             disabled={isLoading}
           />
           <button
